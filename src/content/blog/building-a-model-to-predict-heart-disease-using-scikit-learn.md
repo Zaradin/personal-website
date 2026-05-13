@@ -18,7 +18,7 @@ df = pd.read_csv("heart-disease.csv")
 
 Lets see what our data looks like using `df.head()`.
 
-![](/images/2024/june/eda_head.png)
+![](public/uploads/targets.png)public/uploads/targets.png
 _using `df.head()`_
 
 ```python
