@@ -1,26 +1,49 @@
 ---
+import { Icon } from "astro-icon/components";
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-    <li><a class="py-3 text-base" id="services" href="/services">Services</a></li>
-    <li><a class="py-3 text-base" id="store" href="/store">Store</a></li>
-    <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
     <li>
-        <a
-            class="py-3 text-base"
-            href="mailto:contact.manuelernestog@gmail.com"
-            target="_blank"
-            referrerpolicy="no-referrer-when-downgrade">Contact</a
-        >
+        <a class={`py-3 text-base font-bold ${sideBarActiveItemID === "home" ? "active-nav" : ""}`} href="/">
+            <Icon name="tabler:home" class="w-5 h-5" /> Home
+        </a>
+    </li>
+    <li>
+        <a class={`py-3 text-base font-bold ${sideBarActiveItemID === "blog" ? "active-nav" : ""}`} href="/blog/">
+            <Icon name="tabler:pencil" class="w-5 h-5" /> Blog
+        </a>
+    </li>
+    <li>
+        <a class={`py-3 text-base font-bold ${sideBarActiveItemID === "about" ? "active-nav" : ""}`} href="/about">
+            <Icon name="tabler:user" class="w-5 h-5" /> About
+        </a>
+    </li>
+    <li>
+        <a class={`py-3 text-base font-bold ${sideBarActiveItemID === "projects" ? "active-nav" : ""}`} href="/projects">
+            <Icon name="tabler:folder" class="w-5 h-5" /> Projects
+        </a>
+    </li>
+    <li>
+        <a class={`py-3 text-base font-bold ${sideBarActiveItemID === "cv" ? "active-nav" : ""}`} href="/cv">
+            <Icon name="tabler:file-cv" class="w-5 h-5" /> CV
+        </a>
+    </li>
+    <li>
+        <a class="py-3 text-base font-bold" href="mailto:contact@gmail.com" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+            <Icon name="tabler:mail" class="w-5 h-5" /> Contact
+        </a>
     </li>
 </ul>
 
-<script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
-</script>
+<style>
+    .active-nav {
+        background-color: rgba(245, 166, 35, 0.1);
+        color: #F5A623;
+        border-radius: 0.5rem;
+    }
+
+    .active-nav:hover {
+        background-color: rgba(245, 166, 35, 0.15);
+    }
+</style>

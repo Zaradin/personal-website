@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 import { ViewTransitions } from "astro:transitions";
+import { Icon } from "astro-icon/components";
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
 
@@ -18,24 +19,47 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="lofi">
-  <head>
-    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
-    {TRANSITION_API && <ViewTransitions />}
-  </head>
-  <body>
+<html lang="en" data-theme="forest">
+<head>
+  <script is:inline>
+    (() => {
+      const DARK_THEME = "forest";
+      const STORAGE_KEY = "theme";
+      const savedTheme = localStorage.getItem(STORAGE_KEY);
+      const theme = savedTheme || DARK_THEME;
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <BaseHead title={title} description={description} image={image} ogType={ogType} />
+  {TRANSITION_API && <ViewTransitions />}
+</head>
+  <body >
+  <div class="max-w-6xl mx-auto relative">
+  <button
+    id="theme-toggle"
+    class="absolute top-4 right-4 z-50 btn btn-circle btn-sm"
+    aria-label="Toggle theme"
+  >
+    <Icon name="tabler:sun" id="icon-sun" class="w-5 h-5" />
+    <Icon name="tabler:moon" id="icon-moon" class="w-5 h-5 hidden" />
+  </button>
+
     <div class="bg-base-100 drawer lg:drawer-open">
-      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content bg-base-100">
-        <Header title={SITE_TITLE} />
-        <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
-            <slot />
-          </main>
+
+      <div class="bg-base-100 drawer lg:drawer-open">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content bg-base-100">
+          <Header title={SITE_TITLE} />
+          <div class="md:flex md:justify-center">
+            <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
+              <slot />
+            </main>
+          </div>
+          <Footer />
         </div>
-        <Footer />
+        {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
       </div>
-      {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
 
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -59,6 +83,60 @@ const {
         });
       }
     </script>
+
+  <script is:inline>
+    const DARK_THEME = "forest";
+    const LIGHT_THEME = "cupcake";
+    const STORAGE_KEY = "theme";
+
+    function getSavedTheme() {
+      return localStorage.getItem(STORAGE_KEY) || DARK_THEME;
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+
+      const sun = document.getElementById("icon-sun");
+      const moon = document.getElementById("icon-moon");
+
+      if (sun && moon) {
+        if (theme === DARK_THEME) {
+          sun.classList.remove("hidden");
+          moon.classList.add("hidden");
+        } else {
+          sun.classList.add("hidden");
+          moon.classList.remove("hidden");
+        }
+      }
+    }
+
+    function setupThemeToggle() {
+      applyTheme(getSavedTheme());
+
+      const button = document.getElementById("theme-toggle");
+      if (!button) return;
+
+      button.onclick = () => {
+        const current =
+          document.documentElement.getAttribute("data-theme") || DARK_THEME;
+
+        const next = current === DARK_THEME ? LIGHT_THEME : DARK_THEME;
+
+        localStorage.setItem(STORAGE_KEY, next);
+        applyTheme(next);
+      };
+    }
+
+    setupThemeToggle();
+
+    document.addEventListener("astro:page-load", setupThemeToggle);
+
+    document.addEventListener("astro:before-swap", event => {
+      const theme = getSavedTheme();
+      event.newDocument.documentElement.setAttribute("data-theme", theme);
+    });
+  </script>
+
 
   </body>
 </html>
