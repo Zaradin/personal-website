@@ -1,17 +1,26 @@
 ---
-title: "Demo Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 10 2022"
-heroImage: "/post_img.webp"
-tags: ["tokio"]
+title: Demo Post 1
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+pubDate: May 13 2026
+heroImage: /post_img.webp
+tags:
+  - tokio
 ---
-
 Inline math: $E = mc^2$
 
 Display math:
 
 $$
-\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}
+\int_0^\infty e^{-x^2},dx = \frac{\sqrt{\pi}}{2}
+$$
+
+
+
+$$
+
+E = MC^2
+
 $$
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
