@@ -42,11 +42,17 @@ const {
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
+          if (!user && (
+            window.location.hash.includes("invite_token") ||
+            window.location.hash.includes("recovery_token") ||
+            window.location.hash.includes("confirmation_token")
+          )) {
+            window.netlifyIdentity.open();
           }
+
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
         });
       }
     </script>
