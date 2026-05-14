@@ -3,16 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
+<BaseLayout title="CV" sideBarActiveItemID="cv">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    A hardworking and curious person who genuinely enjoys figuring things out and learning new skills,
+    especially when it comes to data analysis and machine learning. Completed an undergraduate degree in
+    Software Systems Development and is currently finishing an MSc in Mathematical Modelling & Machine
+    Learning, which will be completed in August 2026. Machine learning is a real passion, and one of the main
+    reasons for pursuing the MSc was to learn as much as possible in the field. Always motivated to explore
+    new concepts, take on challenges, and keep developing both technical skills and understanding, and is
+    excited to begin a career in a machine learning role where there is always something new to learn.
   </div>
 
   <div class="mb-5">
@@ -21,13 +24,21 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="MSc Mathematical Modelling & Machine Learning"
+      subtitle="September 2025 to August 2026 at University College Cork, Cork, Ireland"
+    >
+      Exploring the mathematical foundations of machine learning, including dynamical systems, optimisation,
+      numerical analysis, and complex networks. Core modules: Deep Learning, Neural Networks, Engineering
+      Machine Learning Solutions, Nonlinear Dynamics, Numerical Methods, and Scientific Computing.
+    </TimeLineElement>
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="BSc (Hons) Software Systems Development"
+      subtitle="September 2021 to May 2025 at South East Technological University, Waterford, Ireland"
+    >
+      Graduated with First Class Honours (1.1). Served as Class Representative for all four years.
+      Core modules: Website Development, Computer Networks, Database Design (SQL, NoSQL),
+      Automated Cloud Services, Application Security.
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -36,35 +47,62 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Software Engineer Intern at Dataworks Ltd."
+      subtitle="July 2023 to December 2023 at Dataworks Ltd., Waterford, Ireland"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Developed an in-house change control system using .NET and TypeScript as part of a collaborative
+      development team. Designed and implemented RESTful APIs and database schemas to support change
+      tracking and approval workflows. Wrote unit and integration tests to ensure code quality and system
+      reliability. Participated in agile development processes including sprint planning, daily stand-ups,
+      and code reviews.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Retail Associate at Eurospar"
+      subtitle="May 2017 to October 2025 at Eurospar, Waterford, Ireland"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Managed inventory control and merchandise ordering, maintaining optimal stock levels across departments.
+      Trained and mentored new staff members on store procedures and customer service standards.
+      Balanced part-time work with full-time education, demonstrating strong time management and commitment.
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold">Projects</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Neonatal EEG Seizure Classification"
+      subtitle="January 2026 to May 2026 — Scikit-learn, Jupyter Lab, EEGlib, MLFlow"
+    >
+      Used EEG data recorded from 79 term neonates admitted to the NICU at Helsinki University Hospital.
+      Compared feature types including Frequency Features, Time Domain Features, and Entropy based features.
+      After final evaluation the model was deployed within a Docker cloud environment for inference.
+    </TimeLineElement>
+    <TimeLineElement
+      title="System for Detection of Alzheimer's Disease using Deep Learning"
+      subtitle="January 2024 to May 2025 — PyTorch, MONAI, Python, Azure/AWS, React, Docker"
+    >
+      Conducted comparative research on deep learning architectures (ResNet, DenseNet, SENet) and MRI
+      voxel dimensions for Alzheimer's disease classification. Developed a cloud-based web application
+      enabling medical professionals to upload MRI scans and receive automated diagnostic predictions.
+      Implemented end-to-end ML pipeline including model training, deployment, and inference API.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Honours & Awards</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <span class="font-semibold">SunLife Academic Enterprise Award</span> — May 2025, awarded in the
+      Enterprise Category for demonstrating strong initiative and high-impact academic work.
     </li>
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <span class="font-semibold">Charitable and Sustainable Thinking Award</span> — May 2025, DCH Consulting.
+      Awarded for a standout final-year project demonstrating significant original research in an important
+      societal domain.
     </li>
   </ul>
 
@@ -72,21 +110,56 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <div class="mb-5">
+    <div class="text-xl font-semibold mb-2">Languages</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-4">
+      <li>Python</li>
+      <li>C / C++ / C#</li>
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>Kotlin</li>
+      <li>SQL</li>
+      <li>R</li>
+      <li>LaTeX</li>
+    </ul>
+
+    <div class="text-xl font-semibold mb-2">ML / AI</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-4">
+      <li>PyTorch</li>
+      <li>TensorFlow</li>
+      <li>Scikit-learn</li>
+      <li>XGBoost</li>
+      <li>AWS SageMaker</li>
+      <li>NumPy</li>
+      <li>Pandas</li>
+      <li>JAX</li>
+      <li>MONAI</li>
+      <li>Keras</li>
+    </ul>
+
+    <div class="text-xl font-semibold mb-2">Web & Databases</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-4">
+      <li>React</li>
+      <li>Node.js</li>
+      <li>RESTful APIs</li>
+      <li>Streamlit</li>
+      <li>SQLite</li>
+      <li>Firebase</li>
+      <li>SQL Server</li>
+      <li>MongoDB</li>
+    </ul>
+
+    <div class="text-xl font-semibold mb-2">Cloud & Tools</div>
+    <ul class="list-disc md:columns-4 columns-2 mx-6 mb-4">
+      <li>AWS</li>
+      <li>Docker</li>
+      <li>Git</li>
+      <li>Linux</li>
+      <li>Power BI</li>
+      <li>RStudio</li>
+      <li>Jupyter</li>
+      <li>Android Studio</li>
+    </ul>
+  </div>
+
 </BaseLayout>

@@ -7,6 +7,10 @@ public_folder: "/uploads"
 
 publish_mode: editorial_workflow
 
+logo:
+  src: "../logo.svg"
+  show_in_header: true
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -15,9 +19,29 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
+    media_folder: "public/uploads/blog/{{slug}}"
+    public_folder: "/uploads/blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Publish Date", name: "pubDate", widget: "datetime", date_format: "MMM DD YYYY", time_format: false }
-      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - {
+          label: "Publish Date",
+          name: "pubDate",
+          widget: "datetime",
+          date_format: "MMM DD YYYY",
+          time_format: false,
+        }
+      - {
+          label: "Hero Image",
+          name: "heroImage",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          required: false,
+          hint: "Add tags separated by pressing Enter",
+        }
       - { label: "Body", name: "body", widget: "markdown" }
