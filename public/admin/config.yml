@@ -13,26 +13,26 @@ collections:
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
-    extension: "md"x
+    extension: "md"
     format: "frontmatter"
     media_folder: "public/uploads/blog/{{slug}}"
     public_folder: "/uploads/blog/{{slug}}"
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Description"
-        name: "description"
-        widget: "text"
-      - label: "Publish Date"
-        name: "pubDate"
-        widget: "datetime"
-        date_format: "MMM DD YYYY"
-        time_format: false
-      - label: "Hero Image"
-        name: "heroImage"
-        widget: "image"
-        required: false
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Publish Date",
+          name: "pubDate",
+          widget: "datetime",
+          date_format: "MMM DD YYYY",
+          time_format: false,
+        }
+      - {
+          label: "Hero Image",
+          name: "heroImage",
+          widget: "image",
+          required: false,
+        }
       - label: "Tags"
         name: "tags"
         widget: "list"
@@ -41,6 +41,4 @@ collections:
           label: "Tag"
           name: "tag"
           widget: "string"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+      - { label: "Body", name: "body", widget: "markdown" }
