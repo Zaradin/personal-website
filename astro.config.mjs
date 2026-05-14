@@ -8,7 +8,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astrofy-template.netlify.app",
+  site: "https://joshcrotty.com",
   integrations: [mdx(), sitemap(), tailwind()],
   integrations: [tailwind(), icon()],
   markdown: {
