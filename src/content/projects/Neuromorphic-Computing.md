@@ -9,16 +9,17 @@ tags:
   - AI
   - Research
 ---
-
 ## Overview
 
 Write the project details here.
 
 ## Features
 
-- Feature one
-- Feature two
+* Feature one
+* Feature two
 
 ## What I learned
+
+![](/uploads/khalid2.jpg)
 
 Add notes here.
