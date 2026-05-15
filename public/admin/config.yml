@@ -20,8 +20,9 @@ collections:
           label: "Publish Date",
           name: "pubDate",
           widget: "datetime",
-          date_format: "MMM DD YYYY",
+          date_format: "YYYY-MM-DD",
           time_format: "HH:mm",
+          format: "YYYY-MM-DDTHH:mm:ss",
         }
       - {
           label: "Hero Image",
@@ -55,9 +56,11 @@ collections:
           label: "Publish Date",
           name: "pubDate",
           widget: "datetime",
-          date_format: "MMM DD YYYY",
+          date_format: "YYYY-MM-DD",
           time_format: "HH:mm",
+          format: "YYYY-MM-DDTHH:mm:ss",
         }
+
       - {
           label: "Hero Image",
           name: "heroImage",
