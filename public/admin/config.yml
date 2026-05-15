@@ -15,8 +15,6 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
-    media_folder: "public/uploads/blog/{{slug}}"
-    public_folder: "/uploads/blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
@@ -50,8 +48,7 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
-    media_folder: "public/uploads/projects/{{slug}}"
-    public_folder: "/uploads/projects/{{slug}}"
+
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
