@@ -21,7 +21,7 @@ collections:
           name: "pubDate",
           widget: "datetime",
           date_format: "MMM DD YYYY",
-          time_format: false,
+          time_format: "HH:mm",
         }
       - {
           label: "Hero Image",
@@ -56,7 +56,7 @@ collections:
           name: "pubDate",
           widget: "datetime",
           date_format: "MMM DD YYYY",
-          time_format: false,
+          time_format: "HH:mm",
         }
       - {
           label: "Hero Image",
