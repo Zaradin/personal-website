@@ -2,7 +2,7 @@
 title: Building a model to predict Heart Disease using Scikit-Learn
 description: todo
 pubDate: May 16 2026
-heroImage: /uploads/blog/building-a-model-to-predict-heart-disease-using-scikit-learn/heart-disease-image.jpg
+heroImage: ""
 tags:
   - Machine Learning
   - Deep Learning
@@ -11,19 +11,22 @@ TESTThe dataset we are going to be using is coming from the [UC Irvine Machine L
 <br>Here is the link to the Kaggle dataset:
 <https://www.kaggle.com/datasets/sumaiyatasmeem/heart-disease-classification-dataset>.
 
-_If you want to follow along you can download the dataset from either of the two links provided above and import it into your notebook using pandas._
+*If you want to follow along you can download the dataset from either of the two links provided above and import it into your notebook using pandas.*
 
 ```python
 df = pd.read_csv("heart-disease.csv")
 ```
----
+
+- - -
 
 ## Exploring the Data
 
 Lets see what our data looks like using `df.head()`.
 
-![](public/uploads/targets.png)public/uploads/targets.png
-_using `df.head()`_
+![](public/uploads/targets.png)
+
+public/uploads/targets.png
+*using `df.head()`*
 
 ```python
 df.shape #(rows, columns)
@@ -33,7 +36,8 @@ df.shape #(rows, columns)
 You can see above that their are 303 rows and 14 columns. This makes sense as we said above we are only using 14 features for our model development. And we also have 303 rows worth of data. Below is an image showing how balanced the dataset is, with 165 rows of data that are classed as having heart disease (1) and 138 classed as not having heart disease (0). Based on this initial analysis we can say that it’s a balanced dataset.
 
 ![](/images/2024/june/targets.png)
-_Image of the dataset targets._
+
+*Image of the dataset targets.*
 
 ## Checking for Null Values
 
@@ -98,10 +102,10 @@ Lets look at another example, we are going to look at the “cp” feature which
 
 “cp” — chest pain type
 
-- 0: Typical angina: chest pain related decrease blood supply to the heart
-- 1: Atypical angina: chest pain not related to heart
-- 2: Non-anginal pain: typically esophageal spasms (non heart related)
-- 3: Asymptomatic: chest pain not showing signs of disease
+* 0: Typical angina: chest pain related decrease blood supply to the heart
+* 1: Atypical angina: chest pain not related to heart
+* 2: Non-anginal pain: typically esophageal spasms (non heart related)
+* 3: Asymptomatic: chest pain not showing signs of disease
 
 Does chest pain relate to whether or not someone has heart disease? Lets find out.
 
@@ -121,7 +125,8 @@ plt.xticks(rotation=0);
 ```
 
 ![](/images/2024/june/chest_pain_type.png)
-_Heart Disease Frequency Per Chest Pain Type_
+
+*Heart Disease Frequency Per Chest Pain Type*
 
 Looking at the visual graph above that I created in jupyter with the code snippet above, you can see that if someone reports chest pain of 0 the majority are reported to not have heart disease (target = 0). Compare that now to people who report to have chest pain of 1 or 2, The majority of these patients are reported to have heart disease (target = 1).
 
@@ -139,16 +144,18 @@ ax = sns.heatmap(corr_matrix,
 ```
 
 ![](/images/2024/june/correlation_matrix.png)
-_Correlation Matrix of independent & dependent features_
 
-Analyzing the correlation matrix between _cp_ (chest pain type) and exang (exercise induced angina). The correlation matrix revealed a moderate positive correlation of 0.43 between _cp_ and the presence of heart disease. This suggests that as the type of chest pain (_cp_) becomes more indicative of typical angina symptoms, there is a moderate tendency for the likelihood of heart disease to increase. Secondly, we can observed a moderate negative correlation of -0.44 between _exang_ and heart disease presence. This implies that as the occurrence of exercise induced angina (_exang_) decreases, indicating a lower likelihood of angina during physical exertion, there is a moderate tendency for heart disease presence to increase. These findings underscore the potential predictive value of these features in assessing the risk of heart disease, highlighting their roles as important factors in our model development.
+*Correlation Matrix of independent & dependent features*
 
----
+Analyzing the correlation matrix between *cp* (chest pain type) and exang (exercise induced angina). The correlation matrix revealed a moderate positive correlation of 0.43 between *cp* and the presence of heart disease. This suggests that as the type of chest pain (*cp*) becomes more indicative of typical angina symptoms, there is a moderate tendency for the likelihood of heart disease to increase. Secondly, we can observed a moderate negative correlation of -0.44 between *exang* and heart disease presence. This implies that as the occurrence of exercise induced angina (*exang*) decreases, indicating a lower likelihood of angina during physical exertion, there is a moderate tendency for heart disease presence to increase. These findings underscore the potential predictive value of these features in assessing the risk of heart disease, highlighting their roles as important factors in our model development.
+
+- - -
 
 ## Model Development
 
 ![](/images/2024/june/model_development.png)
-_Scikit-learn choosing the right estimator image_
+
+*Scikit-learn choosing the right estimator image*
 
 The first thing you need to think about is what Machine Learning Algorithm are you going to use to train your model on? Scikit-learn has a handy webpage which shows a map just like the one above where it helps you in figuring out what algorithm to choose from. The green boxes are models you can pick from, and the blue circles are questions related to your problem. Our heart disease problem is a classification problem because we are prediction labels or classes 1 or 0, heart disease or not heart disease.
 
@@ -256,7 +263,8 @@ print(f"Maxium KNN score on the test data: {max(test_scores)*100:.2f}%")
 ```
 
 ![](/images/2024/june/tunning_knn.png)
-_Hyperparameter Tuning of the KNN algorithm_
+
+*Hyperparameter Tuning of the KNN algorithm*
 
 We can see though that even with tuning the best accuracy we got with KNN was 75.41% which is still lower than the other baseline models without hyperparameter tuning. We will now see what accuracy we can get with tuning the other two models, using a different approach compared with the one we just did by hand, this time we will be using RandomizedSearchCV.
 
@@ -348,7 +356,7 @@ gs_log_reg.score(x_test, y_test)
 
 The best hyperparameters it found were: {‘C’: 0.20433597178569418, ‘solver’: ‘liblinear’} yet the accuracy stayed the same at 88.5%. We could provide more hyperparameters within our grid for the LogisticRegression model and it could improve accuracy a bit more but at this stage we are going to finish up on hyperparameter tuning and improving the models and move onto evaluation and metrics.
 
----
+- - -
 
 ## Final Model Evaluation
 
@@ -367,7 +375,8 @@ plt.show()
 ```
 
 ![](/images/2024/june/roc_curve.png)
-_ROC Curve & AUC of 0.93_
+
+*ROC Curve & AUC of 0.93*
 
 **Area Under Curve (The ROC curve):**
 
@@ -396,8 +405,9 @@ def plot_conf_mat(y_test, y_preds):
 plot_conf_mat(y_test, y_preds)
 ```
 
-![](/images/2024/june/confusion_matrix.png)
-_The Confusion Matrix_
+![](/uploads/heart-disease-image.jpg)
+
+*The Confusion Matrix*
 
 This shows the True Positive(TP), False Positive(FP), True Negative(TN), False Negative(FN) of our predictions using the LogisticRegression GridSearchCV model.
 
