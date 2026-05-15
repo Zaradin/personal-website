@@ -4,7 +4,7 @@ description: An end to end deep learning final year project covering research,
   data collection and preprocessing, feature engineering, model training, and
   deployment of a production ready system for the detection of Alzheimer's
   disease.
-pubDate: May 15 2026
+pubDate: Jul 17 2025T16:02
 heroImage: /uploads/fyp_blog_cover_image.png
 repoUrl: https://github.com/Zaradin/FYP
 ---
