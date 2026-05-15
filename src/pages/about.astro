@@ -1,77 +1,62 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
-import { Icon } from "astro-icon/components";
-
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const last_posts = posts.slice(0, 3);
 ---
 
-<BaseLayout sideBarActiveItemID="about">
-  <div class="pb-12 mt-5">
-  <div style="border-left: 2px solid #F5A623; padding-left: 24px;">
-    <!--<div class="text-xl py-1">Hey there 👋</div>-->
-    <div class="text-4xl font-bold">Meet, Josh</div>
-    <br>
-    <!--<div class="text-3xl py-3 font-bold">Currently Studying MSc Mathematical Modelling & Machine Learning</div>
-    <div class="py-2">-->
+<BaseLayout title="About" sideBarActiveItemID="about">
+  <main class="md:flex md:justify-center">
+    <article class="prose prose-lg max-w-[750px] w-full">
 
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
-    </div>
-    </div>
-  </div>
+      <div class="pb-8 mt-5" style="border-left: 2px solid #F5A623; padding-left: 24px;">
+        <h1 class="text-4xl font-bold mb-4">About Me</h1>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
-  </div>
+        <p>
+          Hello there! I’m Josh Crotty, currently pursuing an MSc in Mathematical
+          Modelling & Machine Learning at University College Cork (UCC). I previously
+          completed an undergraduate degree in Software Systems Development at SETU,
+          where I built a strong foundation in software engineering, data science, and
+          modern development practices.
+        </p>
+      </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+    <figure class="not-prose my-8">
+      <img
+        src="/about/ucc_quad.jpg"
+        loading="lazy"
+        alt="The Quadrangle at University College Cork"
+        class="w-full max-h-[400px] object-cover rounded-md"
+      />
+      <figcaption class="text-center text-sm opacity-60 mt-2">
+        The Quadrangle at University College Cork (UCC).
+      </figcaption>
+    </figure>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
+      <p>
+        My main interests centre around building scalable intelligent systems,
+        particularly where data science, machine learning, and software engineering
+        intersect. I have a strong interest in healthcare applications of AI,
+        especially how data analysis and machine learning can contribute to solving
+        meaningful problems.
+      </p>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+      <p>
+        I also enjoy technical writing and knowledge sharing, which is one of the
+        motivations behind this blog. I regularly write about concepts I’m learning,
+        projects I’m working on, and ideas around AI, software, and applied
+        mathematics.
+      </p>
+
+      <p>
+        During my undergraduate final year, I developed a cloud based deep learning
+        system for detecting signs of Alzheimer’s disease from MRI imaging. This work
+        was recognised with the Sun Life Academic Award and the DCH Consulting Award
+        for Charitable & Sustainable Thinking.
+      </p>
+
+      <p>
+        Looking ahead, I hope to move into industry or research & development within
+        healthcare AI, contributing to systems that have real impact.
+      </p>
+
+    </article>
+  </main>
 </BaseLayout>

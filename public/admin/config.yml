@@ -42,3 +42,50 @@ collections:
           name: "tag"
           widget: "string"
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    media_folder: "public/uploads/projects/{{slug}}"
+    public_folder: "/uploads/projects/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - {
+          label: "Publish Date",
+          name: "pubDate",
+          widget: "datetime",
+          date_format: "MMM DD YYYY",
+          time_format: false,
+        }
+      - {
+          label: "Hero Image",
+          name: "heroImage",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Project URL",
+          name: "projectUrl",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Repo URL",
+          name: "repoUrl",
+          widget: "string",
+          required: false,
+        }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "string"
+      - { label: "Body", name: "body", widget: "markdown" }
