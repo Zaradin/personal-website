@@ -48,7 +48,6 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
-
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
