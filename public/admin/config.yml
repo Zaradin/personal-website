@@ -30,6 +30,8 @@ collections:
           name: "heroImage",
           widget: "image",
           required: false,
+          media_folder: "/public/uploads",
+          public_folder: "/uploads",
         }
       - label: "Tags"
         name: "tags"
@@ -63,6 +65,8 @@ collections:
           name: "heroImage",
           widget: "image",
           required: false,
+          media_folder: "/public/uploads",
+          public_folder: "/uploads",
         }
       - {
           label: "Project URL",
