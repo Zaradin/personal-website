@@ -19,14 +19,20 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="forest">
+<html lang="en" data-theme="business">
 <head>
+
+  <!-- this theme script prevents toggle theme flashing-->
   <script is:inline>
     (() => {
-      const DARK_THEME = "forest";
+      const DARK_THEME = "business";
+      const LIGHT_THEME = "cupcake";
       const STORAGE_KEY = "theme";
+
       const savedTheme = localStorage.getItem(STORAGE_KEY);
-      const theme = savedTheme || DARK_THEME;
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      const theme = savedTheme || (prefersDark ? DARK_THEME : LIGHT_THEME);
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
@@ -216,12 +222,16 @@ const {
 
   <!-- Toggle Dark and Light modes-->
   <script is:inline>
-    const DARK_THEME = "forest";
+    const DARK_THEME = "business";
     const LIGHT_THEME = "cupcake";
     const STORAGE_KEY = "theme";
 
     function getSavedTheme() {
-      return localStorage.getItem(STORAGE_KEY) || DARK_THEME;
+      const savedTheme = localStorage.getItem(STORAGE_KEY);
+      if (savedTheme) return savedTheme;
+
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      return prefersDark ? DARK_THEME : LIGHT_THEME;
     }
 
     function applyTheme(theme) {
