@@ -18,8 +18,6 @@ $$
 
 When equations become too difficult to solve algebraically, the Newton-Raphson method provides a fast and elegant way to approximate the solution using calculus.
 
-> INSERT IMAGE OF A CURVE WITH A TANGENT LINE TOUCHING THE CURVE AND INTERSECTING THE X-AXIS
-
 ## What Is the Newton-Raphson Method?
 
 The Newton-Raphson method starts with an initial guess (x_0) and repeatedly improves that guess by using the tangent line to the function.
