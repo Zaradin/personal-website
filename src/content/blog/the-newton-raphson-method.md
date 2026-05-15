@@ -6,7 +6,7 @@ heroImage: /uploads/blog-head-newton-raphson-method.png
 tags:
   - Numerical Methods
 ---
-# Newton-Raphson Method: Finding Roots with Calculus
+## Newton-Raphson Method: Finding Roots with Calculus
 
 The **Newton-Raphson Method** is one of the most powerful and widely used numerical techniques for finding the roots of equations.
 
