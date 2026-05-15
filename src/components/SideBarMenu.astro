@@ -30,20 +30,11 @@ const { sideBarActiveItemID } = Astro.props;
         </a>
     </li>
     <li>
-        <a class="py-3 text-base font-bold" href="mailto:contact@gmail.com" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-            <Icon name="tabler:mail" class="w-5 h-5" /> Contact
+        <a
+            class={`py-3 text-base font-bold ${sideBarActiveItemID === "contact" ? "active-nav" : ""}`}
+            href="/contact">
+            <Icon name="tabler:mail" class="w-5 h-5" />
+            Contact
         </a>
     </li>
 </ul>
-
-<style>
-    .active-nav {
-        background-color: rgba(245, 166, 35, 0.1);
-        color: #F5A623;
-        border-radius: 0.5rem;
-    }
-
-    .active-nav:hover {
-        background-color: rgba(245, 166, 35, 0.15);
-    }
-</style>

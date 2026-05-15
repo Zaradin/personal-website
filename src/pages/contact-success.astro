@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Message Sent" sideBarActiveItemID="contact">
+  <main class="md:flex md:justify-center">
+    <article class="prose prose-lg max-w-[750px] w-full">
+      <h1 class="text-4xl font-bold mb-3">Message Sent</h1>
+      <p>Thanks for reaching out. I’ll get back to you soon.</p>
+
+      <a href="/" class="active-nav inline-block px-5 py-3 font-medium no-underline mt-4">
+        Back Home
+      </a>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .active-nav {
+    background-color: rgba(245, 166, 35, 0.1);
+    color: #F5A623;
+    border-radius: 0.5rem;
+  }
+
+  .active-nav:hover {
+    background-color: rgba(245, 166, 35, 0.15);
+  }
+</style>

@@ -1,3 +1,12 @@
 .time-line-container > div:last-child .education__time > .education__line {
   display: none;
 }
+.active-nav {
+  background-color: rgba(245, 166, 35, 0.1);
+  color: #f5a623;
+  border-radius: 0.5rem;
+}
+
+.active-nav:hover {
+  background-color: rgba(245, 166, 35, 0.15);
+}
