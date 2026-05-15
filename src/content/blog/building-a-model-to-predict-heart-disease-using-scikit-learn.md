@@ -1,7 +1,7 @@
 ---
 title: Building a model to predict Heart Disease using Scikit-Learn
 description: todo
-pubDate: May 16 2026
+pubDate: Jan 07 2026T16:04
 heroImage: /uploads/heart-disease-image.jpg
 tags:
   - Machine Learning
