@@ -405,8 +405,6 @@ def plot_conf_mat(y_test, y_preds):
 plot_conf_mat(y_test, y_preds)
 ```
 
-![](/uploads/heart-disease-image.jpg)
-
 *The Confusion Matrix*
 
 This shows the True Positive(TP), False Positive(FP), True Negative(TN), False Negative(FN) of our predictions using the LogisticRegression GridSearchCV model.
