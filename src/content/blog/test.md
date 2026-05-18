@@ -1,10 +1,11 @@
 ---
 title: test
-description: ""
-pub_date: 2026-05-18
-hero_image: ""
+description: "test"
+pub_date: 2026-05-11T00:00:00.000Z
+hero_image:
+  - /uploads/testImage.jpg
 badge: ""
-tags: ""
-body: ""
+tags: "testTag"
+body: "notsure"
 ---
-
+this is a test here and we will see if it works
