@@ -1,6 +1,5 @@
 {
   "file": "",
-  "name": "blog",
   "fileType": "md",
   "fmType": "yaml",
   "template": [
@@ -58,12 +57,13 @@
     {
       "name": "tags",
       "label": "tags",
-      "type": "string",
-      "value": "",
+      "type": "Array",
+      "value": [],
       "description": "",
       "isIgnored": false,
       "isRequired": false,
-      "defaultValue": ""
+      "defaultValue": "",
+      "subType": "string"
     },
     {
       "name": "body",
