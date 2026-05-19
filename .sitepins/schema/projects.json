@@ -1,6 +1,5 @@
 {
   "file": "",
-  "name": "projects",
   "fileType": "md",
   "fmType": "yaml",
   "template": [
@@ -48,6 +47,16 @@
     {
       "name": "repo_url",
       "label": "repoUrl",
+      "type": "string",
+      "value": "",
+      "description": "",
+      "isIgnored": false,
+      "isRequired": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "project_url",
+      "label": "projectUrl",
       "type": "string",
       "value": "",
       "description": "",
