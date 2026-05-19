@@ -2,11 +2,11 @@
 title: The Newton Raphson Method
 description: What is the Newton Raphson Method and how do you use it?
 pub_date: 2026-01-07T16:04:00.000Z
-hero_image: 
-  - /uploads/blog-head-newton-raphson-method.png
+hero_image: "/uploads/blog-head-newton-raphson-method.png"
 tags:
   - Numerical Methods
 ---
+
 ## Newton Raphson Method: Finding Roots with Calculus
 
 The **[Newton Raphson Method](https://en.wikipedia.org/wiki/Newton%27s_method)** is one of the most powerful and widely used numerical techniques for finding the roots of equations.
@@ -39,10 +39,10 @@ $$
 
 Where:
 
-* $x_n$ is the current approximation.
-* $x_{n+1}$ is the next approximation.
-* $f(x_n)$ is the value of the function at $x_n$.
-* $f'(x_n)$ is the derivative, or the slope of the tangent line.
+- $x_n$ is the current approximation.
+- $x_{n+1}$ is the next approximation.
+- $f(x_n)$ is the value of the function at $x_n$.
+- $f'(x_n)$ is the derivative, or the slope of the tangent line.
 
 ## Why This Formula Works
 
@@ -178,19 +178,19 @@ After only three iterations, the approximation is accurate to many decimal place
 
 ## Advantages of the Newton-Raphson Method
 
-* Extremely fast convergence near the root.
-* Simple formula to implement.
-* Widely used in mathematics, engineering, and computer science.
-* Forms the basis of many scientific computing algorithms.
+- Extremely fast convergence near the root.
+- Simple formula to implement.
+- Widely used in mathematics, engineering, and computer science.
+- Forms the basis of many scientific computing algorithms.
 
 ## Limitations
 
 The method can fail if:
 
-* The derivative is zero or very close to zero.
-* The initial guess is too far from the root.
-* The function is not smooth.
-* The iterations diverge instead of converging.
+- The derivative is zero or very close to zero.
+- The initial guess is too far from the root.
+- The function is not smooth.
+- The iterations diverge instead of converging.
 
 Because of this, choosing a reasonable starting point is important.
 

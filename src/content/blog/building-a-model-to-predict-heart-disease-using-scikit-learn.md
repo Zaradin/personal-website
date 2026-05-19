@@ -2,8 +2,7 @@
 title: Building a model to predict Heart Disease using Scikit-Learn
 description: Model development with Scikit Learn and Python.
 pub_date: 2026-01-07T16:04:00.000Z
-hero_image: 
-  - /uploads/heart-disease-image.jpg
+hero_image: "/uploads/heart-disease-image.jpg"
 tags:
   - Machine Learning
   - Deep Learning
