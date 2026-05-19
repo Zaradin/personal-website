@@ -7,6 +7,6 @@ description: An end to end deep learning final year project covering research,
 pub_date: 2026-01-07T16:04:00.000Z
 hero_image: 
   - /uploads/fyp_blog_cover_image.png
-repoUrl: https://github.com/Zaradin/FYP
+repo_url: https://github.com/Zaradin/FYP
 ---
 todo

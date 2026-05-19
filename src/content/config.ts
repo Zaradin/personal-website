@@ -22,8 +22,8 @@ const projectSchema = z.object({
   hero_image: z.array(z.string()).transform((arr) => arr[0]).optional(),
   badge: z.string().optional(),
   status: z.string().optional(),
-  projectUrl: z.string().optional(),
-  repoUrl: z.string().optional(),
+  project_url: z.string().optional(),
+  repo_url: z.string().optional(),
   tags: z.array(z.string()).optional(),
   stack: z.array(z.string()).optional(),
 });
