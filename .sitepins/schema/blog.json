@@ -54,6 +54,16 @@
       "isRequired": false,
       "defaultValue": "",
       "subType": "string"
+    },
+    {
+      "name": "draft",
+      "label": "Draft",
+      "type": "boolean",
+      "value": true,
+      "description": "",
+      "isIgnored": false,
+      "isRequired": false,
+      "defaultValue": "true"
     }
   ]
 }
