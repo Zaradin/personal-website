@@ -45,6 +45,17 @@
       "defaultValue": ""
     },
     {
+      "name": "tags",
+      "label": "tags",
+      "type": "Array",
+      "value": [],
+      "description": "",
+      "isIgnored": false,
+      "isRequired": false,
+      "defaultValue": "",
+      "subType": "string"
+    },
+    {
       "name": "repo_url",
       "label": "repoUrl",
       "type": "string",
