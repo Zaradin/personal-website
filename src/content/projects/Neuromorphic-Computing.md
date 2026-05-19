@@ -1,7 +1,7 @@
 ---
 title: Neuromorphic Computing
 description: Research into brain-inspired computing architectures.
-pub-date: May 16 2026
+pub_date: 2026-01-07T16:04:00.000Z
 heroImage: 
   - /images/projects/neuromorphic-computing.webp
 projectUrl: https://example.com

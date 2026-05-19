@@ -1,7 +1,7 @@
 ---
 title: "Neonatal EEG Seizure Classification "
 description: Classification on EEG data from Helsinki University Hospital.
-pub_date: May 15 2026
+pub_date: 2026-01-07T16:04:00.000Z
 heroImage: 
   - /uploads/neonatal-eeg-seizure-classification.png
 tags:

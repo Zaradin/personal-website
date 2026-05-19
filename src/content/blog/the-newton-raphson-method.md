@@ -1,7 +1,7 @@
 ---
 title: The Newton Raphson Method
 description: What is the Newton Raphson Method and how do you use it?
-pub_date: May 15 2026
+pub_date: 2026-01-07T16:04:00.000Z
 heroImage: 
   - /uploads/blog-head-newton-raphson-method.png
 tags:
