@@ -36,7 +36,7 @@
     },
     {
       "name": "hero_image",
-      "label": "hero image",
+      "label": "heroImage",
       "type": "gallery",
       "value": "",
       "description": "",
