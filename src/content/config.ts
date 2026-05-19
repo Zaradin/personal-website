@@ -5,7 +5,7 @@ const blogSchema = z.object({
   description: z.string(),
   pub_date: z.union([z.date(), z.string()]).transform((value) => new Date(value)),
   updatedDate: z.string().optional(),
-  heroImage: z.array(z.string()).transform((arr) => arr[0]).optional(),
+  hero_image: z.array(z.string()).transform((arr) => arr[0]).optional(),
   badge: z.string().optional(),
   tags: z
     .array(z.string())
@@ -19,7 +19,7 @@ const projectSchema = z.object({
   title: z.string(),
   description: z.string(),
   pub_date: z.union([z.date(), z.string()]).transform((value) => new Date(value)),
-  heroImage: z.array(z.string()).transform((arr) => arr[0]).optional(),
+  hero_image: z.array(z.string()).transform((arr) => arr[0]).optional(),
   badge: z.string().optional(),
   status: z.string().optional(),
   projectUrl: z.string().optional(),
