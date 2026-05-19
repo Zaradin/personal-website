@@ -36,7 +36,7 @@
     },
     {
       "name": "hero_image",
-      "label": "heroImage",
+      "label": "hero_image",
       "type": "media",
       "value": "",
       "description": "",
@@ -46,7 +46,7 @@
     },
     {
       "name": "repo_url",
-      "label": "repoUrl",
+      "label": "repo_url",
       "type": "string",
       "value": "",
       "description": "",
@@ -56,7 +56,7 @@
     },
     {
       "name": "project_url",
-      "label": "projectUrl",
+      "label": "project_url",
       "type": "string",
       "value": "",
       "description": "",
