@@ -57,7 +57,7 @@
     },
     {
       "name": "repo_url",
-      "label": "repo_url",
+      "label": "repoUrl",
       "type": "string",
       "value": "",
       "description": "",
