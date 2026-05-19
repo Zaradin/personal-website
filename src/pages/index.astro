@@ -5,10 +5,14 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 import { Icon } from "astro-icon/components";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pub_date.valueOf() - a.data.pub_date.valueOf());
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pub_date.valueOf() - a.data.pub_date.valueOf());
 const last_posts = posts.slice(0, 3);
 
-const projects = (await getCollection("projects")).sort((a, b) => b.data.pub_date.valueOf() - a.data.pub_date.valueOf());
+const projects = (await getCollection("projects"))
+  .filter((project) => !project.data.draft)
+  .sort((a, b) => b.data.pub_date.valueOf() - a.data.pub_date.valueOf());
 const last_projects = projects.slice(0, 3);
 ---
 
