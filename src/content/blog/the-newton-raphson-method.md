@@ -1,8 +1,9 @@
 ---
 title: The Newton Raphson Method
 description: What is the Newton Raphson Method and how do you use it?
-pubDate: May 15 2026
-heroImage: /uploads/blog-head-newton-raphson-method.png
+pub_date: May 15 2026
+heroImage: 
+  - /uploads/blog-head-newton-raphson-method.png
 tags:
   - Numerical Methods
 ---

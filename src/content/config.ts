@@ -1,10 +1,11 @@
 import { z, defineCollection } from "astro:content";
+
 const blogSchema = z.object({
   title: z.string(),
   description: z.string(),
-  pubDate: z.union([z.date(), z.string()]).transform((value) => new Date(value)),
+  pub_date: z.union([z.date(), z.string()]).transform((value) => new Date(value)),
   updatedDate: z.string().optional(),
-  hero_image: z.array(z.string()).optional().transform((arr) => arr?.[0]),
+  heroImage: z.array(z.string()).transform((arr) => arr[0]).optional(),
   badge: z.string().optional(),
   tags: z
     .array(z.string())
@@ -17,8 +18,8 @@ const blogSchema = z.object({
 const projectSchema = z.object({
   title: z.string(),
   description: z.string(),
-  pubDate: z.union([z.date(), z.string()]).transform((value) => new Date(value)),
-  hero_image: z.array(z.string()).optional().transform((arr) => arr?.[0]),
+  pub_date: z.union([z.date(), z.string()]).transform((value) => new Date(value)),
+  heroImage: z.array(z.string()).transform((arr) => arr[0]).optional(),
   badge: z.string().optional(),
   status: z.string().optional(),
   projectUrl: z.string().optional(),
