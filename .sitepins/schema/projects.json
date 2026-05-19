@@ -25,7 +25,7 @@
     },
     {
       "name": "pub_date",
-      "label": "PubDate",
+      "label": "pub_date",
       "type": "Date",
       "value": "2026-05-19",
       "description": "",
@@ -57,7 +57,7 @@
     },
     {
       "name": "repo_url",
-      "label": "repoUrl",
+      "label": "repo_url",
       "type": "string",
       "value": "",
       "description": "",
