@@ -7,7 +7,8 @@ tags:
   - tag1
   - tag2
 repo_url: "https://github.com/"
-project_url: "youtube.com"
-draft: true
+project_url: "https://www.youtube.com"
+draft: false
 ---
+
 todo

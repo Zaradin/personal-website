@@ -3,11 +3,12 @@ title: Neuromorphic Computing
 description: Research into brain-inspired computing architectures.
 pub_date: 2026-01-07T16:04:00.000Z
 hero_image: "/images/projects/neuromorphic-computing.webp"
-project_url: https://example.com
-repo_url: https://github.com/yourusername/neuromorphic-computing
 tags:
   - AI
   - Research
+repo_url: "https://github.com/yourusername/neuromorphic-computing"
+project_url: "https://example.com"
+draft: false
 ---
 
 ## Overview

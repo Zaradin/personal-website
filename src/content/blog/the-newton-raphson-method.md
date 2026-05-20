@@ -5,6 +5,7 @@ pub_date: 2026-01-07T16:04:00.000Z
 hero_image: "/uploads/blog-head-newton-raphson-method.png"
 tags:
   - Numerical Methods
+draft: false
 ---
 
 ## Newton Raphson Method: Finding Roots with Calculus
