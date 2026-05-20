@@ -6,7 +6,9 @@ description: An end to end deep learning final year project covering research,
   disease.
 pub_date: 2026-01-07T16:04:00.000Z
 hero_image: "/uploads/fyp_blog_cover_image.png"
+tags:
 repo_url: "https://github.com/Zaradin/FYP"
+project_url:
 draft: false
 ---
 
