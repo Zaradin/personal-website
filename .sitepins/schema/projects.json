@@ -77,7 +77,7 @@
     },
     {
       "name": "draft",
-      "label": "Draft",
+      "label": "draft",
       "type": "boolean",
       "value": true,
       "description": "",
